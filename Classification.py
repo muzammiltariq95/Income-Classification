@@ -23,3 +23,24 @@ dataset.columns = ['age','workclass','fnlwgt','education',
 dataset.shape
 
 dataset.head(2)
+
+dataset.info()
+
+dataset.describe(include='all')
+
+dataset.isnull().sum()
+
+dataset.duplicated().sum()
+
+dataset = dataset.drop_duplicates(keep='first')
+
+dataset.duplicated().sum()
+
+# Strip leading/trailing whitespace from the column
+dataset['earning'] = dataset['earning'].str.strip()
+
+# Replace the values
+dataset['earning'] = dataset['earning'].replace({'<=50K': 0, '>50K': 1})
+
+# Ensure the column is of integer type
+dataset['earning'] = dataset['earning'].astype(int)
