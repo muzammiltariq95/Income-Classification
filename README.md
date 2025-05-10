@@ -1,54 +1,61 @@
-# Classification Project
+# 💼 Income Classification Model
 
-## Objective
-Perform classification to predict the earning category (<=50K or >50K) based on various demographic and work-related attributes. Draw inferences from the classification results.
+A binary classification model built to predict whether an individual's income exceeds $50K/year based on demographic and employment data. Built using Neural Networks and Boosted Decision Trees in **Azure ML Studio**, with data preprocessing in Python and SQL.
 
-## Data Description
-The dataset contains information on individuals, including their demographic details, work-related attributes, and earnings. The goal is to classify individuals into earning categories based on these attributes.
+---
 
-### Columns
-- **age**: Age of the individual
-- **workclass**: Type of employment (e.g., Private, Self-emp-not-inc)
-- **fnlwgt**: Final weight, a measure used in the dataset
-- **education**: Highest level of education achieved
-- **education-num**: Number of years of education
-- **marital-status**: Marital status of the individual
-- **occupation**: Type of occupation (e.g., Exec-managerial, Handlers-cleaners)
-- **relationship**: Relationship status within a family (e.g., Husband, Not-in-family)
-- **race**: Race of the individual
-- **sex**: Gender of the individual
-- **capital-gain**: Capital gains in the past year
-- **capital-loss**: Capital losses in the past year
-- **hours-per-week**: Number of hours worked per week
-- **native-country**: Country of origin
-- **earning**: Earning category (<=50K or >50K)
+## 📌 Project Overview
 
-## Steps to Perform Classification
-1. **Data Preprocessing**: Clean the data by handling missing values, encoding categorical variables, and scaling numerical features.
-2. **Feature Selection**: Select relevant features that contribute to the classification task.
-3. **Model Training**: Train various classification models (e.g., Logistic Regression, Decision Trees, Random Forest) on the preprocessed data.
-4. **Model Evaluation**: Evaluate the models using metrics like accuracy, precision, recall, and F1-score.
-5. **Hyperparameter Tuning**: Optimize the model parameters to improve performance.
-6. **Analyze Results**: Draw inferences from the classification results and interpret the model's predictions.
+This project aims to support economic segmentation and decision-making by predicting income levels using features such as education, work class, hours worked per week, and age. It combines SQL-based preprocessing with classical ML and deep learning techniques.
 
-## Inferences
-- **Feature Importance**: Identify the most important features that influence the earning category.
-- **Model Performance**: Compare the performance of different models and select the best one.
-- **Insights**: Provide insights based on the classification results, such as identifying key factors that contribute to higher earnings.
+---
 
-## Usage
-1. **Clone Repository**: Clone the repository to your local machine.
-   ```bash
-   git clone https://github.com/muzammiltariq95/income-classification.git
-   ```
-2. **Install Dependencies**: Install the required dependencies using `requirements.txt`.
-   ```bash
-   pip install -r requirements.txt
-   ```
-3. **Run Analysis**: Execute the provided scripts to perform classification and analyze the results.
+## 🔧 Tech Stack
 
-## Contributing
-Contributions are welcome! Please read the contributing guidelines for more details.
+- **Languages:** Python, SQL
+- **Platforms:** Azure ML Studio, Jupyter Notebook
+- **Libraries:** Scikit-learn, matplotlib, seaborn
+- **ML Models:** Neural Networks, Boosted Decision Trees
+- **Concepts:** EDA, Feature Engineering, Data Balancing
 
-## License
-This project is licensed under the MIT License - see the LICENSE file for details.
+---
+
+## 🧠 Key Features
+
+- Achieved **87.2% accuracy** on the test set
+- Identified top predictors: **education, age, and working hours**
+- Balanced class distribution using oversampling
+- Used **SQL** for filtering and joining large demographic datasets prior to modeling
+- Compared classical ML with Neural Network performance
+
+---
+
+## 📊 EDA & Preprocessing
+
+- Handled missing values and encoded categorical variables
+- Performed correlation analysis to reduce multicollinearity
+- Visualized feature distributions and class imbalance
+- Used **oversampling** techniques to balance classes (income >50K vs ≤50K)
+
+---
+
+## 🚀 How to Run
+
+1. Load the dataset (publicly available at [UCI Repository](https://archive.ics.uci.edu/ml/datasets/adult))
+2. Run the notebook in Jupyter or Azure ML Studio
+3. Modify paths or column names as needed
+
+---
+
+## 📈 Results
+
+- Final accuracy: **87.2%**
+- F1 score: 0.84
+- Improved interpretability using feature importance and visualizations
+
+---
+
+## 📫 Contact
+
+Built by **[Muzammil Tariq](https://www.linkedin.com/in/muzammiltariq95/)**  
+Open to feedback, contributions, and collaboration.
